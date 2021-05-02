@@ -43,18 +43,17 @@ let linear_percent = list_color => {
 };
 
 let array_color_of_tag = skills => {
-  let skills_to_color = skills.tags |> List.map(item => item |> color_of_tag);
+  let colors = skills.tags |> List.map(item => item |> color_of_tag);
 
   let linear_to_gradient =
-    skills_to_color
+    colors
     |> List.mapi((i, color) =>
-         (`percent((skills_to_color |> linear_percent)[i]), color)
+         (`percent((colors |> linear_percent)[i]), color)
        );
 
   let linear_or_solid =
-    List.length(skills_to_color) === 1
-      ? List.hd(skills_to_color)
-      : Css.linearGradient(`deg(90.), linear_to_gradient);
+    List.length(colors) === 1
+      ? List.hd(colors) : Css.linearGradient(`deg(90.), linear_to_gradient);
 
   linear_or_solid;
 };
