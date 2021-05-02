@@ -1,0 +1,18 @@
+{
+  "name": "wosleyv.dev",
+  "dependencies": {
+    "@opam/ocaml-lsp-server": "*",
+    "bs-platform": "*"
+  },
+  "resolutions": {
+    "bs-platform": "melange-re/melange#ccceb69"
+  },
+  "esy": { 
+    "buildsInSource": "unsafe",     
+    "build": [
+      "ln -sfn #{bs-platform.install} node_modules/bs-platform",
+      "bsb -make-world"    
+    ] 
+  },
+  "installConfig": { "pnp": false }
+}
