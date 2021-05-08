@@ -34,11 +34,14 @@ module Styles = {
 let make = (~profile: Data.profile) => {
   <Container>
     <div className=Styles.wrapper>
-      <img
-        className=Styles.profileImg
-        src={profile.avatar_url}
-        alt="Image-Profile-Github"
-      />
+      <div>
+        <img
+          className=Styles.profileImg
+          src={profile.avatar_url}
+          alt="Image-Profile-Github"
+        />
+        <Socials />
+      </div>
       <section className=Styles.section>
         <Resume profile />
         <Skills data={profile.skills} />
