@@ -5,7 +5,7 @@
     "bs-platform": "*"
   },
   "resolutions": {
-    "bs-platform": "melange-re/melange#ccceb69"
+    "bs-platform": "melange-re/melange#415ff63"
   },
   "esy": { 
     "buildsInSource": "unsafe",     
