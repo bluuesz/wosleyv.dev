@@ -11,15 +11,12 @@ type styles = {
 
 type customStyles = {content: styles};
 
-module Modal = {
-  [@module "react-modal"] [@react.component]
-  external make:
-    (
-      ~isOpen: bool,
-      ~contentLabel: string,
-      ~style: customStyles,
-      ~children: React.element
-    ) =>
-    React.element =
-    "default";
-};
+[@module "react-modal"] [@react.component]
+external make:
+  (
+    ~isOpen: bool,
+    ~contentLabel: string,
+    ~style: customStyles,
+    ~children: React.element
+  ) =>
+  React.element;
