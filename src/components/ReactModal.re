@@ -19,4 +19,5 @@ external make:
     ~style: customStyles,
     ~children: React.element
   ) =>
-  React.element;
+  React.element =
+  "default";
